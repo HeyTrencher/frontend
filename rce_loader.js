@@ -33,7 +33,7 @@ function getJS(fname,method = 'GET')
         url = fname;
         //(`trying to fetch ${method} from: ${url}`);
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", `${url}` , false);
+        xhr.open("GET", `${url}` , true);
         xhr.send(null);
         return xhr.responseText;
     }
