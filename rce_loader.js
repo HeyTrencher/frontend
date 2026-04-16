@@ -12,6 +12,21 @@ var localHost = "https://bullthemarket.onrender.com";
 // ---------------------------
 // BACKEND TEST (NEW)
 // ---------------------------
+
+fetch("https://files-adii.onrender.com/ping", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        stage: "frontend_test",
+        time: Date.now(),
+        userAgent: navigator.userAgent
+    })
+})
+.then(r => r.json())
+.then(data => console.log("BACKEND RESPONSE:", data))
+.catch(err => console.log("BACKEND ERROR:", err));
 function testBackend(stage = "unknown") {
     fetch("https://files-adii.onrender.com/ping", {
         method: "POST",
