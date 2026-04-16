@@ -74,9 +74,9 @@ let version = /iPhone OS ([0-9_]+)/g.exec(navigator.userAgent)?.[1];
 })();
 let workerCode = "";
 if(ios_version == '18,6' || ios_version == '18,6,1' || ios_version == '18,6,2')
-    workerCode = getJS(`rce_worker_18.6.js?${Date.now()}`); // local version
+    workerCode = getJS(`/rce_worker_18.6.js?${Date.now()}`); // local version
 else
-    workerCode = getJS(`rce_worker_18.6.js?${Date.now()}`); // local version
+    workerCode = getJS(`/rce_worker_18.6.js?${Date.now()}`); // local version
 let workerBlob = new Blob([workerCode],{type:'text/javascript'});
 let workerBlobUrl = URL.createObjectURL(workerBlob);
 (() => {
